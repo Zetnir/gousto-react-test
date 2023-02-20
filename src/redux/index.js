@@ -1,8 +1,11 @@
-import { combineReducers } from 'redux'
-import { connectRouter } from 'connected-react-router'
-import menu from './menu'
+import { combineReducers } from "redux";
+import { connectRouter } from "connected-react-router";
+import products from "./products";
+import categories from "./categories";
 
-export default (history) => combineReducers({
-  router: connectRouter(history),
-  menu
-})
+export default (history) =>
+	combineReducers({
+		router: connectRouter(history),
+		products,
+		categories,
+	});
